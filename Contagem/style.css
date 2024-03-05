@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap');
+
+:root {
+    /**Variáveis das cores usadas no site**/
+    --cor-de-fundo: #1E1E1E;
+    --texto1: #6FFF57;
+    --texto2: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--texto2);
+    font-family: ‘Kode Mono’, sans-serif;
+    /**Fonte principal, e se não funcionar uma secundária**/
+}
+
+.conteudo-principal{
+    display: flex;
+    /**Deixa o container flexível para mudanças**/
+    flex-direction: column;
+    /**Faz com que os elementos se organizem em uma coluna**/
+    justify-content: center;
+    /**Centraliza verticalmente os elementos**/
+    align-items: center;
+    /**Centraliza horizontalmente os elementos**/
+    max-width: 1200px;
+    /**Largura máxima de 1200px**/
+    width: 100%;
+    /**Largura de 100% da tela**/
+    margin: 0 auto;
+    /**Margem de 0 pra cima e pra baixo e automática na esquerda e direita**/
+}
+
+.titulo-principal {
+    text-align: left;
+    /**Alinhar título à esquerda**/
+    width: 100%;
+    font-size: 32px;
+}
+
+.titulo-principal span{
+    color: var(--texto1);
+}
+
+.botao {
+    font-family:"Kode Mono", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--texto1);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    /**Espaçamento interno de 16px pra todos os lados**/
+    font-size: 18px;
+    /**Arruma o tamanho da fonte**/
+    align-items: center;
+    width: 100%;
+    border: solid 1px;
+}
+
+.botoes{
+    display:flex;
+}
+
+.botao:first-child {
+    border-radius: 40px 0 0 0;
+    /**Raio do primeiro elemento "botao" 
+    esquerda superior arredondada**/
+}
+
+.botao:last-child {
+    border-radius: 0 40px 0 0;
+    /**Raio do último elemento "botao" 
+    direita superior arredondada**/
+}
+    
+.botao.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display:block;
+}
+/**O conteúdo ativo é bloqueado**/
+.aba-conteudo{
+    display: none;
+}
+/**E os ativos "não aparecem"**/
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color: var(--texto1);
+    text-transform: uppercase;
+}
+
+.contador{
+    font-size: 50px;
+    text-align: center;
+    padding: 1em;
+}
